@@ -1,6 +1,37 @@
-Great — let’s break **Problem-2 (Max Consecutive Ones III)** down step by step so it’s crystal clear 🚀
+```java
+import java.util.*;
 
----
+public class SolutionBruteForce {
+
+    static int[] longestUniformSubstring(String input) {
+        if (input == null || input.isEmpty()) return new int[]{-1, 0};
+
+        int n = input.length();
+        int longestStart = -1;
+        int longestLength = 0;
+
+     
+        int start = 0;
+        while(start < n){   
+            int end = start+1;
+            while (end < n && input.charAt(start) == input.charAt(end) && input.charAt(start) == '1'){    
+                if(end-start+1 > longestLength){
+                    longestLength = end-start+1 ;
+                    longestStart = start;
+                }
+                end++;
+            }
+            start = end;
+        }
+
+        return new int[]{longestStart, longestLength};
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(longestUniformSubstring("00111110111"))); // [1, 3]
+    }
+}
+```
 
 # 📌 Problem Statement (clear explanation)
 

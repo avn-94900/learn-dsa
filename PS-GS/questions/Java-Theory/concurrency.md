@@ -108,3 +108,12 @@ I’ll reorganize it into the same **structured “Notes Format” by Topic ➝ 
 
 ---
 
+
+
+What is CompletableFuture?
+Difference between Future and CompletableFuture.
+Advantages of CompletableFuture.
+Write a code snippet for the methods of CompletableFuture.
+How do you handle exception when one process in multithreading failed.
+Difference between volatile and synchronized keyword.
+

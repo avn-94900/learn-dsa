@@ -116,12 +116,19 @@ public static void dfs(ArrayList<Edge> graph[], int curr, boolean visited[]) {
     
     System.out.print(curr + " ");
     visited[curr] = true;
+
+    // Recursively visit all neighbors using foreach
+    for (Edge e : graph[curr]) {
+        dfs(graph, e.dest, visited);
+    }
     
+    /*
     // Recursively visit all neighbors
     for (int i = 0; i < graph[curr].size(); i++) {
         Edge e = graph[curr].get(i);
         dfs(graph, e.dest, visited);
     }
+    */
 }
 ```
 

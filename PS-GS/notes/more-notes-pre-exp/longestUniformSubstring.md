@@ -59,6 +59,43 @@ We just scan once while **tracking current streak** of repeated characters.
 ```java
 import java.util.*;
 
+public class SolutionBruteForce {
+
+    static int[] longestUniformSubstring(String input) {
+        if (input == null || input.isEmpty()) return new int[]{-1, 0};
+
+        int n = input.length();
+        int longestStart = -1;
+        int longestLength = 0;
+
+     
+        int start = 0;
+        while(start < n){   
+            int end = start+1;
+            while (end < n && input.charAt(start) == input.charAt(end) ){    
+                if(end-start+1 > longestLength){
+                    longestLength = end-start+1 ;
+                    longestStart = start;
+                }
+                end++;
+            }
+            start = end;
+        }
+
+        return new int[]{longestStart, longestLength};
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(longestUniformSubstring("abbbccda"))); // [1, 3]
+    }
+}
+```
+<br/>
+<br/>
+
+```java
+import java.util.*;
+
 public class SolutionOptimized {
 
     static int[] longestUniformSubstring(String input) {

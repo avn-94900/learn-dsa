@@ -87,9 +87,10 @@ public class Min_Num_Platforms_Required {
             // If next event is arrival (<= means arrival at same time as departure counts as overlap)
             if (arr[i] <= dep[j]) {
                 platform_needed++;
-                if (platform_needed > maxPlatforms) {
-                    maxPlatforms = platform_needed;
-                }
+                // if (platform_needed > maxPlatforms) {
+                //     maxPlatforms = platform_needed;
+                // }
+                maxPlatforms = Math.max(maxPlatforms,platform_needed);
                 i++;
             } else {
                 // Next event is departure
