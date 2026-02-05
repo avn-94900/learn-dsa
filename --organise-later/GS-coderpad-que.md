@@ -91,6 +91,7 @@ public class Ss {
 - Input: `"ababcababce"`
 - Output: `"ab*c*e"`
 
+---
 
 ### Problem Statement (in simple words)
 
@@ -261,4 +262,101 @@ def find_robot_position(directions):
 - **Array Manipulation**: Multiple problems
 - **String Processing**: 2 problems  
 - **Mathematical**: Robot simulation
-- **Optimization**: Time complexity improvements (O(n log n) to O(n))
+
+
+# Interview Questions & Coding Problems - Organized Notes
+
+## 📚 THEORY QUESTIONS
+
+### Java Core Concepts
+
+| Question | Topic | Key Concept |
+|----------|-------|-------------|
+| Q1: Java Pass by Value vs Pass by Reference | Java Memory | Primitives pass by value; changes don't affect original |
+| Q2: Java Object Reference Passing | Java Memory | Objects pass by reference; modifications affect original |
+| Q3: Exception Handling - Catch Block Order | Error Handling | Specific exceptions must be caught before general ones |
+
+---
+
+## 💻 CODING PROBLEMS BY TOPIC
+
+### String Manipulation
+
+| # | Problem | Difficulty | Approach | Time | Space |
+|---|---------|------------|----------|------|-------|
+| 1 | Remove Duplicate Characters | Easy | Hash Set + First Occurrence | O(n) | O(26) |
+| 2 | Backspace String Compare | Easy | Stack / Two Pointers | O(n) | O(n) |
+
+### Array Problems
+
+| # | Problem | Difficulty | Approach | Time | Space |
+|---|---------|------------|----------|------|-------|
+| 3 | Squares of Sorted Array | Medium | Two Pointers | O(n) | O(1) |
+| 4 | Three Sum | Medium | Sort + Two Pointers | O(n²) | O(1) |
+| 5 | Trapping Rain Water | Hard | Left/Right Max Arrays | O(n) | O(n) |
+| 6 | Max Consecutive Ones III | Medium | Sliding Window | O(n) | O(1) |
+
+### Simulation Problems
+
+| # | Problem | Difficulty | Approach | Time | Space |
+|---|---------|------------|----------|------|-------|
+| 7 | Robot Position Tracking | Easy | Direction Simulation | O(n) | O(1) |
+
+---
+
+## 📋 DETAILED PROBLEM DESCRIPTIONS
+
+### String Problems
+
+**Problem 1: Remove Duplicate Characters**
+- Given: Lowercase string
+- Task: Replace duplicates with '*', keep first occurrence
+- Example: `"ababcababce"` → `"ab*c*e"`
+
+**Problem 2: Backspace String Compare**
+- Given: Two strings with lowercase letters and `#` (backspace)
+- Task: Check if final processed strings are equal
+- Example: `"ab#c"` vs `"ad#c"` → Both become `"ac"` → `true`
+
+### Array Problems
+
+**Problem 3: Squares of Sorted Array**
+- Given: Sorted array with negative/positive integers
+- Task: Return sorted squared array in O(n)
+- Example: `[-3, -2, -1, 1, 2, 4, 6]` → `[1, 1, 4, 9, 16, 36]`
+
+**Problem 4: Three Sum**
+- Given: Array of integers
+- Task: Find all unique triplets summing to zero
+- Example: `[-1, 0, 1, 2, -1, -4]` → `[[-1, -1, 2], [-1, 0, 1]]`
+
+**Problem 5: Trapping Rain Water**
+- Given: Array of wall heights
+- Task: Calculate water trapped between walls
+- Example: `[1, 4, 0, 3, 4, 5, 2, 1, 9]` → `13`
+
+**Problem 6: Max Consecutive Ones III**
+- Given: Binary array and K (flips allowed)
+- Task: Find max consecutive 1s after flipping K zeros
+- Example: `[1,0,1,0,1,0,0,0,1,1]`, K=2 → `6`
+
+### Simulation Problems
+
+**Problem 7: Robot Position Tracking**
+- Given: String of direction commands (U/D/L/R)
+- Task: Return final position
+- Example: `"uuullddrrr"` → `(1, 2)`
+
+---
+
+## 🔍 QUICK REFERENCE
+
+| Technique | Problems |
+|-----------|----------|
+| Two Pointers | Problems 3, 4, 2 |
+| Sliding Window | Problem 6 |
+| Hash Map/Set | Problems 1, 4 |
+| Stack | Problem 2 |
+| Simulation | Problem 7 |
+| Prefix Arrays | Problem 5 |
+
